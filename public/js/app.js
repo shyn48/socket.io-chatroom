@@ -26,7 +26,7 @@ function autoScroll() {
     const currentScrollOffset = $messages.scrollTop + visibleHeight
 
     if (containerHeight - newMessageHeight <= currentScrollOffset) {
-        $messages.scrollTop = $messages.scrollHeight
+        $messages.scrollTo({top: $messages.scrollHeight, behavior: 'smooth'});
     }
 
 }
